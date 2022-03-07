@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "e957ed3b-3de9-43a7-ab7b-e913f1207da6",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET http://127.0.0.1:8000/products/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST http://127.0.0.1:8000/products/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \r\n        \"Product 3\"\r\n    ,\r\n    \"price\": \r\n        15.50\r\n    ,\r\n    \"stock\": \r\n        30\r\n    ,\r\n    \"description\": \r\n        \"This is another product description\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE http://127.0.0.1:8000/orders/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2NjU5NDA4LCJpYXQiOjE2NDY2NTkxMDgsImp0aSI6IjNiZGEyOGEyMzYzMDQ3NjZhMTUzYTdkMjlmN2EwYThjIiwidXNlcl9pZCI6MX0.eolAXIZL5EoQR26Ag1kFZQcmpCeNIJMiDTsiHeLY3lM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST http://127.0.0.1:8000/orders/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2NjU5OTg4LCJpYXQiOjE2NDY2NTk2ODgsImp0aSI6IjRjYmMyMGRmZDEzMzRkZjBhYjFiOTg3NDU5MGY1OTk2IiwidXNlcl9pZCI6MX0.dqe3QI_-CzMReLNc1K97r-RFsDOjVoC6WUIVOinmCe0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\": 1,\r\n    \"owner\": 1,\r\n    \"address\": \r\n        \"This field is required.\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET http://127.0.0.1:8000/orders/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2NjU5OTg4LCJpYXQiOjE2NDY2NTk2ODgsImp0aSI6IjRjYmMyMGRmZDEzMzRkZjBhYjFiOTg3NDU5MGY1OTk2IiwidXNlcl9pZCI6MX0.dqe3QI_-CzMReLNc1K97r-RFsDOjVoC6WUIVOinmCe0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\": 1,\r\n    \"owner\": 1,\r\n    \"address\": \r\n        \"This field is required.\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
