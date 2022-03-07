@@ -29,10 +29,12 @@ INSTALLED_APPS = [
     'allauth.account',
     'crispy_forms',
     'debug_toolbar',
+    'safedelete',
 
     # Local
     'accounts',
     'pages',
+    'products',
 ]
 
 # MIDDLEWARE
