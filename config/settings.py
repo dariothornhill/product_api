@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'debug_toolbar',
     'safedelete',
+    'rest_framework',
+    'rest_framework_simplejwt',
 
     # Local
     'accounts',
@@ -173,3 +175,9 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
